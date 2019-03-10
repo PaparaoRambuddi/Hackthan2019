@@ -1,0 +1,4 @@
+#!/bin/sh
+
+curl -X POST localhost:9999/shutdown
+curl -X POST localhost:8585/shutdown

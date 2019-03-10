@@ -1,0 +1,19 @@
+#! /bin/bash
+
+case "$1" in
+  start)
+    echo "Starting JackPoints..."
+    sudo  /bin/bash -c 'cd /home/ec2-user/script && ./startService'
+    ;;
+  stop)
+    echo "Stopping JackPoints..."
+    sudo /bin/bash -c 'cd /home/ec2-user/script && ./stopService'
+    sleep 2
+    ;;
+  *)
+    echo "Usage: /etc/init.d/jack-points {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
